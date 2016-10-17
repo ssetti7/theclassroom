@@ -1,0 +1,17 @@
+@import 'the_classroom/functions';
+
+.title-1 {
+  @extend %font-site-title;
+  @include font-size-rem-px(40);
+  letter-spacing: 1.5rem;
+}
+
+.title-2 {
+  @extend %font-site-subtitle;
+  font-size: 25px;
+}
+
+.title {
+  @extend %font-site-bold;
+  font-size: 16px;
+}

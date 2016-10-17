@@ -1,0 +1,9 @@
+@function strip-unit($num) {
+  @return $num / ($num * 0 + 1);
+}
+
+@mixin font-size-rem-px($pxValue) {
+  $rem-value: $pxValue / strip-unit($base-font-size);
+  font-size: #{$pxValue}px;
+  font-size: #{$rem-value}rem;
+}

@@ -2,6 +2,11 @@
   .container
     %h2.section-heading.text-center
       = image_tag 'week-schedule.png', class: 'image-icon'
-      Today's Schedule
-
+      This week schedule
     .row
+      = 3.times do
+        =render partial: 'scaffold/widgets/weekday_card/weekday', locals: { width_class: 'col-md-4'}
+    .row
+      = 4.times do
+        = render partial: 'scaffold/widgets/weekday_card/weekday', locals: { width_class: 'col-md-3'}
+
