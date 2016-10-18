@@ -22,13 +22,14 @@ gem 'coffee-rails', '~> 4.2'
 
 #HACH to remove drapper error, remove when merged on RAILS 5
 gem 'activemodel-serializers-xml', github: 'rails/activemodel-serializers-xml'
-gem 'draper'
+#gem 'draper'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
+gem 'pronto'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
