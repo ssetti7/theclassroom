@@ -20,16 +20,15 @@ gem 'coffee-rails', '~> 4.2'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
-#HACH to remove drapper error, remove when merged on RAILS 5
+# HACH to remove drapper error, remove when merged on RAILS 5
 gem 'activemodel-serializers-xml', github: 'rails/activemodel-serializers-xml'
-#gem 'draper'
+# gem 'draper'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
-gem 'pronto'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
@@ -41,6 +40,21 @@ gem 'pronto'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
+
+  # metrics dependencies
+  gem 'pronto'
+  gem 'pronto-rubocop', require: false
+  gem 'pronto-flay', require: false
+  gem 'metric_fu'
+  # gem 'pronto', '0.4.1', require: false
+  gem 'pronto-rails_best_practices', require: false
+  gem 'pronto-haml', require: false
+  # gem 'pronto-reek', require: false
+  gem 'pronto-scss', require: false
+  # gem 'scss-lint', '0.30.0', require: false
+  gem 'pronto-coffeelint', require: false
+  gem 'faker'
+  # gem 'parallel_tests', '1.3.9'
 end
 
 group :development do

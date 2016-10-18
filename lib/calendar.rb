@@ -1,4 +1,4 @@
-class Calendar < Struct.new(:view, :date, :callback)
+class Calendar < Struct.new(:view, :date)
   delegate :content_tag, to: :view
 
   START_DAY = :sunday
@@ -18,13 +18,13 @@ class Calendar < Struct.new(:view, :date, :callback)
   def week_rows
     weeks.map do |week|
       content_tag :tr do
-        week.map { |day| day_cell(day)}.join.html_safe
+        week.map { |day| day_cell(day) }.join.html_safe
       end
     end.join.html_safe
   end
 
   def day_cell(day)
-    content_tag :td, view.capture(day, &callback), class: day_classes(day)
+    content_tag :td, day.day, class: day_classes(day)
   end
 
   def day_classes(day)

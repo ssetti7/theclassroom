@@ -1,10 +1,10 @@
 .row
   .col-md-12.text-center
     .well.controls
-      = link_to calendar_show_path(date: (@date - 1.month).to_s), class: "btn btn-default" do
+      = link_to calendar_show_path(date: (@date - 1.month).to_s), class: 'btn btn-default' do
         %i.fa.fa-arrow-left
-      = " #{@date.strftime("%B")} #{@date.year} "
-      = link_to calendar_show_path(date: (@date + 1.month).to_s), class: "btn btn-default" do
+      #{@date.strftime('%B')} #{@date.year}
+      = link_to calendar_show_path(date: (@date + 1.month).to_s), class: 'btn btn-default' do
         %i.fa.fa-arrow-right
 
 .row
