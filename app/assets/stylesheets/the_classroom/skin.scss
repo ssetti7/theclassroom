@@ -1,4 +1,18 @@
 body {
   @extend %font-site-regular;
   color: $color-grey-1;
+  background-color: rgba($site-color, 0.1);
+}
+
+a {
+  color: $site-color;
+
+  &:hover {
+    color: $color-green-1;
+    text-decoration: none;
+  }
+}
+
+.header {
+  background-color: $color-white;
 }
