@@ -1,13 +1,14 @@
-.row
-  .col-md-12.text-center
-    .well.controls
-      = link_to calendar_show_path(date: (@date - 1.month).to_s), class: 'btn btn-default' do
-        %i.fa.fa-arrow-left
-      #{@date.strftime('%B')} #{@date.year}
-      = link_to calendar_show_path(date: (@date + 1.month).to_s), class: 'btn btn-default' do
-        %i.fa.fa-arrow-right
+.container
+  .row
+    .col-md-12.text-center
+      .well.controls
+        = link_to calendar_show_path(date: (@date - 1.month).to_s), class: 'btn btn-default' do
+          %i.fa.fa-arrow-left
+        #{@date.strftime('%B')} #{@date.year}
+        = link_to calendar_show_path(date: (@date + 1.month).to_s), class: 'btn btn-default' do
+          %i.fa.fa-arrow-right
 
-.row
-  .col-md-12
-    = calendar @date do |date|
-      = date.day
+  .row
+    .col-md-12
+      = calendar @date do |date|
+        = date.day
