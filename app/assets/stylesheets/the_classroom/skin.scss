@@ -6,6 +6,7 @@ body {
 
 a {
   color: $site-color;
+  background-color: initial;
 
   &:hover {
     color: $color-green-1;
@@ -15,4 +16,5 @@ a {
 
 .header {
   background-color: $color-white;
+  padding: 10px 5px;
 }
