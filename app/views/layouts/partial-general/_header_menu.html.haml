@@ -1,0 +1,10 @@
+%i.fa.fa-user
+= current_user.email
+.dropdown.dropdown-menu-container
+  %button#menu-button.btn.btn-primary{ data: { toggle: 'dropdown' }, aria: { expanded: false, haspoput: true } }
+    %i.fa.fa-list
+  %ul#menu-list.dropdown-menu.dropdown-menu-right.list-primary{ aria: { labelledby: 'menu-button' } }
+    %li.list-item
+      = link_to 'Calendar', calendar_show_path
+    %li.list-item
+      = link_to 'Log out', destroy_user_session_path, method: :delete

@@ -1,14 +1,18 @@
-@import 'bootstrap';
-
 @import 'fonts';
 @import 'colors';
 @import 'functions';
-@import 'bootstrap_custom';
+
+@import 'bootstrap_customize';
+@import 'bootstrap';
+@import 'bootstrap-sprockets';
+
 @import 'skin';
 
 @import 'title';
 
 @import 'custom_components/menu';
+@import 'custom_components/buttons';
+@import 'custom_components/lists';
 @import 'custom_components/image_icon';
 @import 'custom_components/weekday';
 @import 'custom_components/calendar';
