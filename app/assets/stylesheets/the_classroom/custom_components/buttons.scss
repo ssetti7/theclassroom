@@ -3,3 +3,11 @@
 .btn-info .fa {
   color: $color-white;
 }
+
+.btn-primary {
+  border: 0;
+
+  &:hover {
+    border: 0;
+  }
+}

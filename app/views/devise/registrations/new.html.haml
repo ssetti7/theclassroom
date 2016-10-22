@@ -1,7 +1,8 @@
 .container
-  .section-title
-    %h2 Sign up
-  .section-body
+  %section.section-heading.panel-heading
+  %h2.section-title
+    Sign up
+  %section.section-body.panel-body
     = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
       = devise_error_messages!
       .field
