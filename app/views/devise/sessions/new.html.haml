@@ -1,7 +1,7 @@
 .container
-  .section-title
-    %h2 Log in
-  .section-body
+  %section.section-heading.panel-heading
+    %h2.section-title Log in
+  %section.section-body.panel-body
     = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
       .field
         = f.label :email
