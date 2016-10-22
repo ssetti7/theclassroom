@@ -55,6 +55,10 @@ group :development, :test do
   gem 'pronto-coffeelint', require: false
   gem 'faker'
   # gem 'parallel_tests', '1.3.9'
+
+  gem 'rspec-rails'
+  gem 'rails-controller-testing'
+  gem 'factory_girl_rails'
 end
 
 group :development do
