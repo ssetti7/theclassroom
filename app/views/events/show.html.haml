@@ -1,0 +1,23 @@
+%p#notice= notice
+.container
+  %section.section-heading.panel-heading
+    %h2.section-title
+      Name:
+      = @event.name
+  %section.section-body.panel-body
+    %p
+      %b Description:
+      = @event.description
+    %p
+      %b Start:
+      = @event.start_time
+    %p
+      %b End:
+      = @event.end_time
+    %p
+      %b User:
+      = @event.user_id
+
+    = link_to 'Edit', edit_event_path(@event)
+    \|
+    = link_to 'Back', events_path

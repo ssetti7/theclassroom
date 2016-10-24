@@ -5,13 +5,7 @@ body {
 }
 
 a {
-  color: $site-color;
   background-color: initial;
-
-  &:hover {
-    color: $color-green-1;
-    text-decoration: none;
-  }
 }
 
 .header {

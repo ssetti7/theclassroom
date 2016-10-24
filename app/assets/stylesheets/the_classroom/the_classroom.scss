@@ -1,6 +1,7 @@
 @import 'fonts';
 @import 'colors';
 @import 'functions';
+@import 'variables';
 
 @import 'bootstrap_customize';
 @import 'bootstrap';
@@ -17,3 +18,5 @@
 @import 'custom_components/image_icon';
 @import 'custom_components/weekday';
 @import 'custom_components/calendar';
+@import 'custom_components/bootstrap-datepicker';
+@import 'custom_components/panels';

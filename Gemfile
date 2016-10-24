@@ -54,6 +54,8 @@ group :development, :test do
   # gem 'scss-lint', '0.30.0', require: false
   gem 'pronto-coffeelint', require: false
   gem 'faker'
+
+  gem 'enumerize'
   # gem 'parallel_tests', '1.3.9'
 
   gem 'rspec-rails'

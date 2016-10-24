@@ -17,6 +17,7 @@
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 require 'support/controller_helper'
+require 'support/shared_examples'
 require 'devise'
 
 RSpec.configure do |config|
