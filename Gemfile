@@ -17,6 +17,9 @@ gem 'haml-rails'
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
+
+gem 'momentjs-rails'
+gem 'bootstrap3-datetimepicker-rails'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
@@ -61,6 +64,13 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'rails-controller-testing'
   gem 'factory_girl_rails'
+end
+
+group :test do
+  gem 'cucumber-rails', :require => false
+  gem 'database_cleaner'
+
+  gem 'capybara-screenshot'
 end
 
 group :development do
