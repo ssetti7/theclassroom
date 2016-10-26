@@ -8,5 +8,9 @@ module EventsWorld
 
     click_button('Save')
   end
+
+  def create_event_for_today
+    @today_event || FactoryGirl.create(:today_event)
+  end
 end
 World(EventsWorld)

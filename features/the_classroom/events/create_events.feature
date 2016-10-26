@@ -2,21 +2,23 @@ Feature: Create event
   An event is an exceptional activity of the school, different from a Lesson.
   Ex: Science day, Bring you dad day, College meeting...
 
-  Business rule:
+  Business rules:
     - An event can be realized at the same time that a Lesson
     - An event could cancel the lessons for a whole day
     - An event could cancel the lessons programmed at the same time that the event
 
+  @done
   Scenario: User is not authenticated
     Given the user is not authenticated
     When visit create event view
     Then should be redirected to login view
 
+  @done
   Scenario: Logged user create event parallel to lessons
     Given The user is logged in the system
     When visit create event view
     And fill the event form with the valid data
-    Then should see a message saying that creation succeed
+    Then should see a message saying that the event creation succeed
 
 #  Scenario: Logged user create event that cancel concurrent lessons
 #    Given The user is logged in the system
