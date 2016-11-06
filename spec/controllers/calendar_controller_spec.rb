@@ -5,10 +5,10 @@ RSpec.describe CalendarController, type: :controller do
 
   describe 'GET show' do
     context 'user is not authenticated' do
-      it 'redirects to login page' do
+      before do
         get :show
-        expect(response).to redirect_to :new_user_session
       end
+      it_behaves_like 'redirects to login page'
     end
 
     context 'user is authenticated' do
@@ -25,7 +25,7 @@ RSpec.describe CalendarController, type: :controller do
         describe 'get show' do
 
           it 'instance date with date params' do
-            get :show, date: args_date
+            get :show, params: { date: args_date }
             expect(assigns(:date)).to be_eql args_date
           end
         end

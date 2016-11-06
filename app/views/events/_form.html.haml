@@ -1,0 +1,26 @@
+= form_for(@event, html: { class: 'form-horizontal' }) do |f|
+  - if @event.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@event.errors.count, "error")} prohibited this event from being saved:"
+      %ul
+        - @event.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field.form-group
+    = f.label :name, class: 'col-sm-2 control-label'
+    .col-sm-10
+      = f.text_area :name
+  .field.form-group
+    = f.label :description, class: 'col-sm-2 control-label'
+    .col-sm-10
+      = f.text_area :description
+  .field.datepicker-container.form-group
+    = f.label :start_time, class: 'col-sm-2 control-label'
+    .col-sm-10
+      = f.text_field :start_time
+  .field.datepicker-container.form-group
+    = f.label :end_time, class: 'col-sm-2 control-label'
+    .col-sm-10
+      = f.text_field :end_time
+  .actions.col-sm-push-2.col-sm-4
+    = f.submit 'Save', class: 'btn btn-primary'

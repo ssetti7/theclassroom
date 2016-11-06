@@ -1,20 +1,8 @@
-%div{ class: width_class }
-  .weekday-card.panel.panel-info
+%div{ class: day.width_class }
+  .weekday-card.panel.panel-info{ class: day.class_name}
     .weekday-header.text-center.panel-heading
       .weekday-name
-        Monday
+        = day.name
     .weekday-body.panel-body
       %ul.list-unstyled
-        %li
-          .weekday-event.row
-            .col-md-3
-              = image_tag 'female_teacher.jpeg', class: 'weekday-event-icon'
-            .col-md-9
-              .event-title.title
-                Regular english lesson
-              %span.event-responsible
-                Dr. Madelaine Jhonson
-              .event-time
-                %i.fa.fa-clock-o
-                %span
-                  5:00 PM
+        = render_day_events day.events

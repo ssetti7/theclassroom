@@ -1,0 +1,8 @@
+.container
+  %section.section-heading.panel-heading
+    %h2.section-title Editing event
+  %section.section-body.panel-body
+    = render 'form'
+  %section.bg-primary.panel-footer
+    = link_to 'Back', events_path, class:'btn btn-primary'
+    = link_to 'Show', @event, class:'btn btn-primary'
