@@ -3,12 +3,11 @@ require 'week_day'
 require 'spec_time_helper'
 
 describe WeekDay do
-
   let(:today) { Time.zone.today }
-  let(:events) { [event1, event2, event3 ]}
-  let(:event1) { FactoryGirl.create :event, { start_time: today } }
-  let(:event2) { FactoryGirl.create :event, { start_time: today.next } }
-  let(:event3) { FactoryGirl.create :event, { start_time: today } }
+  let(:events) { [event1, event2, event3] }
+  let(:event1) { FactoryGirl.create :event, start_time: today }
+  let(:event2) { FactoryGirl.create :event, start_time: today.next }
+  let(:event3) { FactoryGirl.create :event, start_time: today }
 
   subject do
     WeekDay.new(day: today, events: events).build_day_struct

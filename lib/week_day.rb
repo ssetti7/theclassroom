@@ -1,3 +1,4 @@
+# class Weekday builds a Day for the current week
 class WeekDay
   attr_reader :day, :events
 
@@ -10,7 +11,7 @@ class WeekDay
     OpenStruct.new(width_class: width_class,
                    name: @day.strftime("%A"),
                    class_name: day_class,
-                   events: build_event_list )
+                   events: build_event_list)
   end
 
   private
@@ -22,7 +23,7 @@ class WeekDay
   end
 
   def width_class
-    return 'col-md-3' unless @day.wday.between?(1,3)
+    return 'col-md-3' unless @day.wday.between?(1, 3)
     'col-md-4'
   end
 
