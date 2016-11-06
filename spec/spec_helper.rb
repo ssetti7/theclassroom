@@ -100,9 +100,6 @@ RSpec.configure do |config|
   # as the one that triggered the failure.
   Kernel.srand config.seed
 =end
-  config.include File.expand_path('../../features/support', __FILE__), :type => :feature
-  # config.include YourHelper, :type => :request
-
   config.include ControllerHelper, type: :controller
   Warden.test_mode!
 

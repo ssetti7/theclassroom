@@ -1,12 +1,7 @@
 .content-section-b
   .container
-    %h2.section-heading.text-center
+    %h2.well.well-sm.text-center
       = image_tag 'week-schedule.png', class: 'image-icon'
       This week schedule
     .row
-      = 3.times do
-        = render partial: 'scaffold/widgets/weekday_card/weekday', locals: { width_class: 'col-md-4' }
-    .row
-      = 4.times do
-        = render partial: 'scaffold/widgets/weekday_card/weekday', locals: { width_class: 'col-md-3' }
-
+      = render_week_days @events

@@ -10,7 +10,10 @@ module EventsWorld
   end
 
   def create_event_for_today
-    @today_event || FactoryGirl.create(:today_event)
+    today = Time.zone.today
+    @today_event || FactoryGirl.create(:today_event,
+                                       start_time: today.at_beginning_of_day,
+                                       end_time: today.at_noon )
   end
 end
 World(EventsWorld)

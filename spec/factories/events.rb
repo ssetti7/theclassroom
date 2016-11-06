@@ -10,8 +10,8 @@ FactoryGirl.define do
   factory :today_event, class: Event do
     name 'This happend today'
     description 'MyText'
-    start_time DateTime.now.at_beginning_of_day
-    end_time DateTime.now.at_midday
+    start_time Time.zone.now.at_beginning_of_day
+    end_time Time.zone.now.at_midday
     user_id 1
   end
 end

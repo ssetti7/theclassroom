@@ -1,0 +1,14 @@
+%li
+  .weekday-event.row
+    .col-md-3
+      = image_tag 'group.jpeg', class: 'weekday-event-icon'
+    .col-md-9
+      .event-title.title
+        = event.name
+      -#TODO %span.event-responsible
+      -#  Dr. Madelaine Jhonson
+      .event-time
+        %i.fa.fa-clock-o
+        %span
+          = "#{event.start_time.strftime('%I:%M%p')} - #{event.end_time.strftime('%I:%M%p')}"
+

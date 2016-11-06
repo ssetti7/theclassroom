@@ -1,24 +1,12 @@
-.weekday-card {
-  //background-color: $color-green-1;
-  //color: $color-white;
+.weekday-card.past-day {
+  @include opacity(0.6);
 }
-//.weekday-header {
-//  display: table;
-//  width: 100%;
-//}
+
 .weekday-name {
   font-size: 20px;
   text-transform: uppercase;
 }
-//.weekday-body {
-//  background-color: white;
-//  color: $color-grey-1;
-//  //border: 1px dashed $color-green-1;
-//}
-//
-//.weekday-event {
-//  background-color: rgba($color-green-1, 0.3);
-//}
+
 .weekday-event-icon {
   width: 50px;
 }

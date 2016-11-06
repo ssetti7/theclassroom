@@ -1,13 +1,17 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+##The Classroom
+Application to share classroom information
 
-Things you may want to cover:
+###Versions: 
+* Ruby 2.0
+* Rails 5
 
-* Ruby version
+###Run tests:
 
-* System dependencies
+* bundle exec rspec spec/
+
+* cucumber features/
 
 * Configuration
 
