@@ -15,8 +15,8 @@ RSpec.describe EventsHelper, type: :helper do
   skip '#render_week_days until fixed render extra parameter' do
     pending 'fix render extra parameter'
     before do
-      allow(WeekDay).to receive(:new).with(day: anything, events: events).
-        and_return new_weekday
+      allow(TheClassroom::WeekDay).to receive(:new).
+        with(day: anything, events: events).and_return new_weekday
       allow(new_weekday).to receive(:build_day_struct).and_return events
       fill_with_events
     end

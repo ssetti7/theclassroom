@@ -18,8 +18,8 @@
           %tr
             %td= event.name
             %td= event.description
-            %td= event.start_time
-            %td= event.end_time
+            %td= event.start_time.meridian_hour
+            %td= event.end_time.meridian_hour
             %td= event.user_id
             %td= link_to 'Show', event
             %td= link_to 'Edit', edit_event_path(event)
