@@ -17,7 +17,7 @@ module EventsHelper
   def build_days_struct(events)
     today = Time.zone.today
     (today.beginning_of_week .. today.end_of_week).map do |day|
-      WeekDay.new(day: day, events: events).
+      TheClassroom::WeekDay.new(day: day, events: events).
         build_day_struct
     end
   end

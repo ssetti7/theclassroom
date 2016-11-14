@@ -133,7 +133,7 @@ RSpec.describe EventsController, type: :controller do
           expect(assigns(:event)).to be_a_new(Event)
         end
 
-        it 're-renders the 'new' template' do
+        it 're-renders the template for new' do
           post :create, params: { event: invalid_attributes }
           expect(response).to render_template("new")
         end
@@ -173,7 +173,7 @@ RSpec.describe EventsController, type: :controller do
           expect(assigns(:event)).to eq(event)
         end
 
-        it 're-renders the 'edit' template' do
+        it 're-renders the edit template' do
           event = Event.create! valid_attributes
           put :update, params: { id: event.to_param, event: invalid_attributes }
           expect(response).to render_template("edit")
